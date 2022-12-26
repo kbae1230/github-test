@@ -1,2 +1,2 @@
 test
-feature/test2
+feature/test

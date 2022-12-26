@@ -1,0 +1,27 @@
+name: Release Drafter
+on:
+  push:
+    # 해당 브랜치에 푸쉬될 때 action 이 실행된다.
+    branches:
+      - master
+  # pull_request:
+  #   # Only following types are handled by the action, but one can default to all as well
+  #   types: [opened, reopened, synchronize]
+  #   branches-ignore:
+  #     - master
+
+jobs:
+  release-drafter:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Release-Drafter
+        uses: release-drafter/release-drafter@v5
+        with:
+          disable-autolabeler: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
