@@ -1,0 +1,82 @@
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+categories:
+  - title: "🚀 Features"
+    labels:
+      - "enhancement"
+      - "fix"
+  - title: "🐛 Bug Fixes"
+    labels:
+      - "bugfix"
+  - title: "🧰 Maintenance"
+    labels:
+      - "chore"
+      - "documentation"
+      - "ci"
+      - "refactor"
+      - "test"
+      - "style"
+  - title: "🔥 HotFixes"
+    label: "hotfix"
+autolabeler:
+  - label: "documentation"
+    branch:
+      - '/docs{0,1}\/.+/'
+    title:
+      - '/docs\:.+/'
+  - label: "fix"
+    branch:
+      - '/fix\/.+/'
+    title:
+      - '/fix\:.+/'
+  - label: "refactor"
+    branch:
+      - '/refactor\/.+/'
+    title:
+      - '/refactor\:.+/'
+  - label: "bugfix"
+    branch:
+      - '/bug\/.+/'
+    title:
+      - '/bug\:.+/'
+  - label: "enhancement"
+    branch:
+      - '/feat\/.+/'
+    title:
+      - '/feat\:.+/'
+  - label: "hotfix"
+    branch:
+      - '/hot\/.+/'
+    title:
+      - '/hot\:.+/'
+  - label: "chore"
+    branch:
+      - '/chore\/.+/'
+    title:
+      - '/chore\:.+/'
+  - label: "style"
+    branch:
+      - '/style\/.+/'
+    title:
+      - '/style\:.+/'
+  - label: "test"
+    branch:
+      - '/test\/.+/'
+    title:
+      - '/test\:.+/'
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - "major"
+  minor:
+    labels:
+      - "minor"
+  patch:
+    labels:
+      - "patch"
+  default: patch
+template: |
+  ## 변경사항
+  $CHANGES
