@@ -5,3 +5,5 @@ feature/test3
 feature/test4
 bugfix/test4
 bugfix/test5
+
+bug/test6
