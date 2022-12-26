@@ -7,3 +7,4 @@ bugfix/test4
 bugfix/test5
 
 bug/test6
+bug/test7
