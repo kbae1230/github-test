@@ -10,3 +10,4 @@ bug/test6
 bug/test7
 
 bug/test8 merge master
+bug/test8 merge master2
