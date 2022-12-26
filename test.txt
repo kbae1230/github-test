@@ -1,2 +1,6 @@
 test
+<<<<<<< HEAD
 feature/test
+=======
+Feature/test
+>>>>>>> 2fe08bebecfd3173f973f60a22dad8232a62d5f7
